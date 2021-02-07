@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <form
+        method ="GET" action="b.html" id="form1"
+        onsubmit="console.log('from tag'); return false";>
+
+        이름 : <input type="text" name="id"><br>
+        메세지 : <input type="text" name="msg"><br>
+        <input type="submit">
+        <form>
+            <script>
+                var t = document.getElementById("form1");
+                t.onsubmit = function a(){
+                    console.log("form property");
+                    return false;
+                }
+                function b(){
+                    console.log("form addEventListener");
+                    return false;
+                }
+                function c(){
+                    console.log("form addEven2");
+                    return false;
+                }
+
+                t.addEventListener("submit", b);
+                t.addEventListener("submit", c);
+                t.removeEventListener("submit", c);
+            </script>
+        </form>
+    </form>
+</body>
+</html>
