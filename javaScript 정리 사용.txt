@@ -1,4 +1,4 @@
-
+갤러리까지 만들고 포토폴리오 사용.
 
 window object
 window 객체
